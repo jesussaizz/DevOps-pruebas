@@ -1,0 +1,11 @@
+on: [pull_request]  //se ejecutará cuando se ejecute un pull
+
+jobs:
+  prueba1:
+    runs-on: ubuntu-latest
+    name: prueba1
+    steps:
+      - uses: AlbertHernandez/assign-me@v1.0.0
+    env:
+      @GITHUB_TOKEN: &{{ secrets.GITHUB_TOKEN }}
+    
